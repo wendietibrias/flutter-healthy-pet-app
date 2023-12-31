@@ -2,6 +2,7 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:healthy_pet_ui/components/home/BannerHome.dart';
+import 'package:healthy_pet_ui/components/home/BottomNavigation.dart';
 import 'package:healthy_pet_ui/components/home/Category.dart';
 import 'package:healthy_pet_ui/components/home/DoctorList.dart';
 import 'package:healthy_pet_ui/components/home/Search.dart';
@@ -20,7 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: HexColor(AppColor.white),
+        bottomNavigationBar: const BottomNavigation(),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
+          // New parameter:
+          scrolledUnderElevation: 0,
           title: Text('Hello,Human!',
               style: TextStyle(
                   fontSize: 24,
